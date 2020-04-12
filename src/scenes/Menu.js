@@ -33,10 +33,10 @@ class Menu extends Phaser.Scene {
 
         //this.add.text(20, 20, "Rocket Patrol Menu");
         this.add.text(centerX, centerY- textSpacer, 'Rocket Patrol', menuConfig).setOrigin(0.5);
-        this.add.text(centerX, centerY, 'Use arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY, 'Use ←→arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color= '#000' ;
-        this.add.text(centerX, centerY + textSpacer, 'Press left for Easy or right for Hard', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY + textSpacer, 'Press ← for Easy or → for Hard', menuConfig).setOrigin(0.5);
 
         //play scene play
         //this.scene.start("playScene");
