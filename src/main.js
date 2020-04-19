@@ -1,4 +1,19 @@
+/*
+__starting__
+moving while firing + 10 
+random spaceship spawns +10
+random scrolling background + 10
 
+__novice__
+new title menu +15
+
+__int__
+new assets rocket space explosion +25
+smaller spaceship worth more point/faster +25
+
+__facade__
+sonic +5 :D
+*/
 
 let config = {
     type: Phaser.CANVAS,
