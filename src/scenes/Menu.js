@@ -5,7 +5,6 @@ class Menu extends Phaser.Scene {
 
     preload() {
         //load audio
-        //this.load.image('rocketpatrolmenu', './assets/rocketpatrolmenu.png');
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
@@ -13,12 +12,10 @@ class Menu extends Phaser.Scene {
 
     create() {
         //background menu
-        //this.rocketpatrolmenu = this.add.tileSprite(0, 0, 960, 540, 'rocketpatrolmenu').setOrigin(0, 0);
-
         let menuConfig  = {
             fontFamily: 'Arial Black',
             fontSize: '28px',
-            backgroundColor:  '#F3B141',
+            backgroundColor:  '#000000',
             color:  '#843605',  
             allign: 'right',
             padding: {
@@ -35,10 +32,12 @@ class Menu extends Phaser.Scene {
         let textSpacer = 64;
 
         //this.add.text(20, 20, "Rocket Patrol Menu");
-        this.add.text(centerX, centerY- textSpacer, 'Rocket Patrol', menuConfig).setOrigin(0.5);
-        this.add.text(centerX, centerY, 'Use ←→arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY- 200, '🚀Rocket Patrol🚀', menuConfig).setOrigin(0.5);
+        this.add.text(centerX, centerY- 150, '↓Instructions↓', menuConfig).setOrigin(0.5);
+        //this.add.text(centerX, centerY, 'Use ←→arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color= '#000' ;
+        this.add.text(centerX, centerY, 'Use ←→arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         this.add.text(centerX, centerY + textSpacer, 'Press ← for Easy or → for Hard', menuConfig).setOrigin(0.5);
 
         //play scene play

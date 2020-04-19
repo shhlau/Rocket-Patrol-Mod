@@ -7,8 +7,9 @@ class Play extends Phaser.Scene {
         //load images/tile sprite
         this.load.image('rocket', './assets/rocket2.png');
         this.load.image('spaceship', './assets/spaceship2.png');
-        this.load.image('starfield', './assets/starfield.png');
+        this.load.image('starfield', './assets/starfield2.png');
         this.load.image('spaceflight', './assets/spaceflight.gif');
+        this.load.image('sanic', './assets/sanic.png');
         //load spritesheet
       
         this.load.spritesheet('explosion', './assets/explosion1.png', { frameWidth: 64, frameheight: 32, startFrame: 0,
@@ -19,6 +20,7 @@ class Play extends Phaser.Scene {
         //place tile
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0, 0);
 
+        
         //white rectangle borders
         this.add.rectangle(5, 5, 630, 32, 0xFFFFFF).setOrigin(0, 0);
         this.add.rectangle(5, 443, 630, 32, 0xFFFFFF).setOrigin(0, 0);
@@ -27,6 +29,7 @@ class Play extends Phaser.Scene {
         //green ui background
         this.add.rectangle(37, 42, 566, 64, 0x00FF00).setOrigin(0,0);
 
+        this.add.image(250,80,'sanic');
         //add rocket(p1)
         this.p1Rocket = new Rocket(this, game.config.width/2, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
 
@@ -67,6 +70,7 @@ class Play extends Phaser.Scene {
         //game over flag
         this.gameOver = false;
 
+        
         //60 seconds clock
         scoreConfig.fixedWidth = 0;
         this.clock = this.time.delayedCall(game.settings.gameTimer, () => {

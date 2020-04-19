@@ -4,7 +4,7 @@ class smallship extends Phaser.GameObjects.Sprite {
         super(scene, x, y, texture, frame);
 
         scene.add.existing(this);
-        this.points = pointValue*2;
+        this.points = pointValue*5;
     }
 
     update() { 
