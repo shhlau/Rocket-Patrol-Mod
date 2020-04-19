@@ -12,7 +12,7 @@ new assets rocket space explosion +25
 smaller spaceship worth more point/faster +25
 
 __facade__
-sonic +5 :D
+sonic icon ui... +5 :D
 */
 
 let config = {
